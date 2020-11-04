@@ -1,0 +1,37 @@
+@import "./base.css";
+
+/* Task 03 */
+
+#gallery {
+  margin: 0;
+  padding: 0;
+  padding: 10px;
+  background-color: rgb(32, 32, 32);
+  list-style: none;
+}
+
+.gallery-item {
+  border: 1px solid #ffffff;
+}
+
+.image-task-03 {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  .gallery-item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #gallery {
+    display: flex;
+  }
+
+  .gallery-item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
