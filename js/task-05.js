@@ -11,3 +11,13 @@
  * 
  */
 
+const nameInputRef = document.querySelector("#name-input");
+const nameNameOutput = document.querySelector("#name-output");
+
+nameInputRef.addEventListener("input", event => {
+   nameNameOutput.textContent = event.target.value;
+   
+   if (nameNameOutput.textContent === "") {
+      nameNameOutput.textContent = "незнакомец";
+   };
+});
