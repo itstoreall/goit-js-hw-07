@@ -40,18 +40,45 @@ const images = [
   },
 ];
 
+// - Добавляем li в список за одну операцию
+
 const galleryRef = document.querySelector("#gallery");
 
-const galleryItems = images.forEach(item => {
-   const galleryItemRef = document.createElement("li");
-   galleryItemRef.classList.add("gallery-item");
+const galleryItems = images.map(item => {
+  const galleryItemRef = document.createElement("li");
+  galleryItemRef.classList.add("gallery-item");
 
-   const imageRef = document.createElement("img");
+  const imageRef = document.createElement("img");
   imageRef.classList.add("image-task-03");
 
-   imageRef.alt = item.alt;
-   imageRef.src = item.url;
+  imageRef.alt = item.alt;
+  imageRef.src = item.url;
 
-   galleryItemRef.appendChild(imageRef);
-   galleryRef.appendChild(galleryItemRef);
+  galleryItemRef.appendChild(imageRef);
+
+  return galleryItemRef;
 });
+
+galleryRef.append(...galleryItems);
+
+/*
+// ======================================================
+// - Добавляем li в список за шесть операций
+
+const galleryRef = document.querySelector("#gallery");
+
+const galleryItems = images.map(item => {
+  const galleryItemRef = document.createElement("li");
+  galleryItemRef.classList.add("gallery-item");
+
+  const imageRef = document.createElement("img");
+  imageRef.classList.add("image-task-03");
+
+  imageRef.alt = item.alt;
+  imageRef.src = item.url;
+
+  galleryItemRef.appendChild(imageRef);
+  galleryRef.appendChild(galleryItemRef);
+});
+
+*/

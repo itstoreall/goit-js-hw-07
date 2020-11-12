@@ -11,6 +11,21 @@
  * 
  */
 
+// - Решение с терн. оператором
+
+const nameInputRef = document.querySelector("#name-input");
+const nameNameOutput = document.querySelector("#name-output");
+
+nameInputRef.addEventListener("input", event => {
+   nameNameOutput.textContent = event.target.value;
+   
+   nameNameOutput.textContent === '' ? nameNameOutput.textContent = "незнакомец" : nameNameOutput.textContent = event.target.value;
+});
+
+/*
+// ====================================================
+// - Решение с if
+
 const nameInputRef = document.querySelector("#name-input");
 const nameNameOutput = document.querySelector("#name-output");
 
@@ -21,3 +36,5 @@ nameInputRef.addEventListener("input", event => {
       nameNameOutput.textContent = "незнакомец";
    };
 });
+
+*/

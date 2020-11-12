@@ -26,6 +26,7 @@
 const boxesRef = document.getElementById("boxes");
 const renderBtnRef = document.querySelector('button[data-action="render"]');
 const destroyBtnRef = document.querySelector('button[data-action="destroy"]');
+const input = document.querySelector("#controls > input");
 
 // - Запускаем кликом функцию получения значения из инпута (type="number")
 // и функцию очистки строки (удалить контент в input)
@@ -54,7 +55,7 @@ function createBoxes(amount) {
 // контексте запускает создание дивчика 
 
 function getInputValue() {
-  const inputValue = document.querySelector("#controls > input").value;
+  const inputValue = input.value;
   createBoxes(inputValue);
 };
 
@@ -68,4 +69,5 @@ function randomColor() {
 
 function destroyBoxes() {
   boxesRef.textContent = "";
+  input.value = null;
 };

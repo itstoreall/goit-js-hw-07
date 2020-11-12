@@ -22,6 +22,23 @@ const ingredients = [
   'Приправы',
 ];
 
+// - Добавляем li в список за одну операцию
+
+const ingredientsRef = document.querySelector("#ingredients");
+
+const arrIngredients = ingredients.map(elem => {
+  const ingredient = document.createElement("li");
+  ingredient.textContent = elem;
+
+  return ingredient;
+});
+
+ingredientsRef.append(...arrIngredients) 
+
+/*
+// ==================================================
+// - Добавляем li в список за шесть операций
+
 const ingredientsRef = document.querySelector("#ingredients");
 
 ingredients.forEach(element => {
@@ -29,3 +46,5 @@ ingredients.forEach(element => {
    ingredient.textContent = element;
    ingredientsRef.appendChild(ingredient);
 });
+
+*/

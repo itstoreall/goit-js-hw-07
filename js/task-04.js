@@ -28,8 +28,6 @@ incrementBtnRef.addEventListener("click", () => {
 });
 
 decrementBtnRef.addEventListener("click", () => {
-   if (counterValue < 1) {
-      counterValue = 0;
-   } else { counterValue -= 1 };
+   counterValue -= 1;
    counterValueRef.textContent = counterValue;
 });
