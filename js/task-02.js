@@ -22,6 +22,14 @@ const ingredients = [
   'Приправы',
 ];
 
+// Код в одну строку
+
+const ingredientsRef = document.querySelector("#ingredients");
+const arrIngredients = ingredients.reduce((liStr, elem) => liStr + `<li class="gallery-item">${elem}</li>`, ``);
+ingredientsRef.insertAdjacentHTML("beforeend", arrIngredients);
+
+/*
+
 // - Добавляем li в список за одну операцию
 
 const ingredientsRef = document.querySelector("#ingredients");
@@ -33,8 +41,9 @@ const arrIngredients = ingredients.map(elem => {
   return ingredient;
 });
 
-ingredientsRef.append(...arrIngredients) 
+ingredientsRef.append(...arrIngredients); 
 
+*/
 /*
 // ==================================================
 // - Добавляем li в список за шесть операций

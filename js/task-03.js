@@ -40,6 +40,12 @@ const images = [
   },
 ];
 
+const galleryRef = document.querySelector("#gallery");
+const arrImages = images.reduce((liStr, elem) => liStr + `<li class="gallery-item"><img class="image-task-03" src="${elem.url}" alt="${elem.alt}"></li>`, ``);
+galleryRef.insertAdjacentHTML("beforeend", arrImages);
+
+/*
+
 // - Добавляем li в список за одну операцию
 
 const galleryRef = document.querySelector("#gallery");
@@ -61,6 +67,7 @@ const galleryItems = images.map(item => {
 
 galleryRef.append(...galleryItems);
 
+*/
 /*
 // ======================================================
 // - Добавляем li в список за шесть операций
